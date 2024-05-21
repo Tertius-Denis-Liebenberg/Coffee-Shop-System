@@ -1,0 +1,76 @@
+﻿<Window x:Class="CoffeeShopSystem.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:CoffeeShopSystem"
+        mc:Ignorable="d"
+        Title="Coffee Shop" Height="450" Width="800">
+    <Grid>
+        <TabControl>
+            <TabItem x:Name="ManagmentTab" Header="Management" Width="125">
+                <Grid Background="#FFE5E5E5">
+                    <Label Content="Coffee Shop System" HorizontalAlignment="Center" Margin="0,25,0,0" VerticalAlignment="Top" Width="252" Height="45" FontWeight="Bold" FontSize="26" FontStyle="Normal"/>
+                    <Button x:Name="b1" HorizontalAlignment="Left" Margin="19,133,0,0" VerticalAlignment="Top" Height="127" Width="128" Click="b1Click">
+                        <Image Source="D:\CTU\2022\PRG521\SA\CoffeeShopSystem\CoffeeShopSystem\PRG521_SA_Resources\save to file 12.png"/>
+                    </Button>
+                    <Button x:Name="b2" HorizontalAlignment="Left" Margin="152,133,0,0" VerticalAlignment="Top" Height="127" Width="128" Click="b2Click">
+                        <Image Source="D:\CTU\2022\PRG521\SA\CoffeeShopSystem\CoffeeShopSystem\PRG521_SA_Resources\print12.png"/>
+                    </Button>
+                    <Button x:Name="b3" HorizontalAlignment="Left" Margin="285,133,0,0" VerticalAlignment="Top" Height="127" Width="134" Click="b3Click">
+                        <Image Source="D:\CTU\2022\PRG521\SA\CoffeeShopSystem\CoffeeShopSystem\PRG521_SA_Resources\Viewdata12.png"/>
+                    </Button>
+                    <RadioButton x:Name="Daily" Content="Dailly" HorizontalAlignment="Left" Margin="507,108,0,0" VerticalAlignment="Top" FontWeight="Bold"/>
+                    <RadioButton x:Name="Monthly" Content="Monthly" HorizontalAlignment="Left" Margin="609,108,0,0" VerticalAlignment="Top" FontWeight="Bold"/>
+                    <RadioButton x:Name="Yearly" Content="Yearly" HorizontalAlignment="Left" Margin="718,108,0,0" VerticalAlignment="Top" FontWeight="Bold"/>
+                    <Label Content="Sale" HorizontalAlignment="Left" Margin="450,102,0,0" VerticalAlignment="Top" FontWeight="Bold"/>
+                    <DatePicker x:Name="DatePicker" HorizontalAlignment="Left" Margin="507,133,0,0" VerticalAlignment="Top" Width="261" DisplayDate="2022-06-15" CalendarClosed="DatePicked" DisplayDateStart="2000-01-01"/>
+                    <Label Content="Summary:" HorizontalAlignment="Left" Margin="450,184,0,0" VerticalAlignment="Top" FontWeight="Bold"/>
+                    <Label x:Name="Summary" Content="" HorizontalAlignment="Left" Margin="450,215,0,0" VerticalAlignment="Top" Height="151" Width="318" Background="#FF989898" FontWeight="Bold"/>
+
+                </Grid>
+            </TabItem>
+            <TabItem x:Name="OrderTab" Header="Order" Width="125">
+                <Grid Background="#FFE5E5E5">
+                    <Label Content="Coffee Shop System" HorizontalAlignment="Center" Margin="0,25,0,0" VerticalAlignment="Top" Width="252" Height="45" FontWeight="Bold" FontSize="26" FontStyle="Normal"/>
+                    <Label Content="Type of Coffee" HorizontalAlignment="Left" Margin="40,85,0,0" VerticalAlignment="Top" FontWeight="Bold"/>
+                    <ComboBox x:Name="CoffeeDrop" HorizontalAlignment="Left" Margin="137,89,0,0" VerticalAlignment="Top" Width="229" SelectedIndex="0">
+                        <ComboBox.Background>
+                            <LinearGradientBrush EndPoint="0,1">
+                                <GradientStop Color="#FFF0F0F0"/>
+                                <GradientStop Color="#FF929090" Offset="1"/>
+                            </LinearGradientBrush>
+                        </ComboBox.Background>
+                        <ComboBoxItem Background="#FF989494">Select</ComboBoxItem>
+                        <ComboBoxItem>Late</ComboBoxItem>
+                        <ComboBoxItem>Capuccino</ComboBoxItem>
+                        <ComboBoxItem>Americano</ComboBoxItem>
+                        <ComboBoxItem>Espresso</ComboBoxItem>
+                        <ComboBoxItem>Machiato</ComboBoxItem>
+                    </ComboBox>
+                    <Image HorizontalAlignment="Left" Height="171" Margin="137,121,0,0" VerticalAlignment="Top" Width="225" Source="D:\CTU\2022\PRG521\SA\CoffeeShopSystem\CoffeeShopSystem\PRG521_SA_Resources\48-485680_coffee-logo-logo-elements-logo-objects-coffee-logo.png"/>
+                    <Button x:Name="AddToOrder" Content="Add to order" HorizontalAlignment="Left" Margin="137,344,0,0" VerticalAlignment="Top" Width="100" FontWeight="Bold" Click="AddToOrderTable"/>
+                    <Button x:Name="PrintOrder" Content="Print" HorizontalAlignment="Left" Margin="260,344,0,0" VerticalAlignment="Top" Width="100" FontWeight="Bold" Click="Print"/>
+                    <Label Content="Size" HorizontalAlignment="Left" Margin="439,85,0,0" VerticalAlignment="Top" FontWeight="Bold"/>
+                    <RadioButton x:Name="SmallOrder" Content="Small" HorizontalAlignment="Left" Margin="515,93,0,0" VerticalAlignment="Top" FontWeight="Bold"/>
+                    <RadioButton x:Name="MediumOrder" Content="Medium" HorizontalAlignment="Left" Margin="594,93,0,0" VerticalAlignment="Top" FontWeight="Bold"/>
+                    <RadioButton x:Name="LargeOrder" Content="Large" HorizontalAlignment="Left" Margin="688,93,0,0" VerticalAlignment="Top" FontWeight="Bold"/>
+                    <CheckBox x:Name="SugarOrder" Content="Sugar" HorizontalAlignment="Left" Margin="515,144,0,0" VerticalAlignment="Top" FontWeight="Bold"/>
+                    <CheckBox x:Name="CreamOrder" Content="Cream" HorizontalAlignment="Left" Margin="594,144,0,0" VerticalAlignment="Top" FontWeight="Bold"/>
+                    <ComboBox x:Name="Quantity" HorizontalAlignment="Left" Margin="671,140,0,0" VerticalAlignment="Top" Width="104" SelectedIndex="0" FontWeight="Bold">
+                        <ComboBoxItem>Select Qtity</ComboBoxItem>
+                        <ComboBoxItem>1</ComboBoxItem>
+                        <ComboBoxItem>2</ComboBoxItem>
+                        <ComboBoxItem>3</ComboBoxItem>
+                        <ComboBoxItem>4</ComboBoxItem>
+                        <ComboBoxItem>5</ComboBoxItem>
+                    </ComboBox>
+                    <Label Content="Order Summary" HorizontalAlignment="Left" Margin="455,181,0,0" VerticalAlignment="Top" FontWeight="Bold"/>
+                    <Label x:Name="OrderSummary" Content="" HorizontalAlignment="Left" Margin="439,212,0,0" VerticalAlignment="Top" FontWeight="Bold" Height="163" Width="320" Background="#FFABABAB"/>
+                    <Label x:Name="Totals" Content="" HorizontalAlignment="Left" Margin="671,344,0,0" VerticalAlignment="Top" Width="80" FontWeight="Bold"/>
+                </Grid>
+            </TabItem>
+        </TabControl>
+
+    </Grid>
+</Window>

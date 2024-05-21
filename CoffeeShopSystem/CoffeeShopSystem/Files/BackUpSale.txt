@@ -1,0 +1,11 @@
+CustomerID      Coffee Type     Size       Sugar      Cream      Qtity           Date                 Price     
+10              Capuccino       Small      Yes        No         2               6/20/2022 12:00:00 AM R 28.5    
+10              Espresso        Large      Yes        Yes        1               6/20/2022 12:00:00 AM R 26      
+13              Americano       Medium     Yes        No         1               6/20/2022 12:00:00 AM R 30      
+13              Espresso        Small      No         No         3               6/20/2022 12:00:00 AM R 22      
+13              Capuccino       Large      Yes        Yes        5               6/20/2022 12:00:00 AM R 37.5    
+16              Late            Small      Yes        No         2               6/20/2022 12:00:00 AM R 28.5    
+16              Americano       Medium     Yes        Yes        1               6/20/2022 12:00:00 AM R 30      
+16              Capuccino       Large      Yes        No         4               6/20/2022 12:00:00 AM R 37.5    
+16              Machiato        Small      No         No         3               6/20/2022 12:00:00 AM R 25      
+16              Espresso        Small      No         No         5               6/20/2022 12:00:00 AM R 22      
